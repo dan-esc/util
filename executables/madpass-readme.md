@@ -5,7 +5,7 @@ to the clipboard with at least one random symbol
 
 ## Installation
 
-Download and place madpass.exe into a preferred folder ie. C:\Apps
+Download and place madpass.exe into a preferred folder ie. C:\Apps \
 Drag the madpass.exe to the Win 10 Taskbar
 
 ## Usage
