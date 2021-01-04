@@ -2,7 +2,7 @@
 
 A simple script to produce a secure yet human readable password that copies
 to the clipboard with at least one random symbol. The script will query 
-dinopass.com over SSL so an internet connection is <required>
+dinopass.com over SSL so an internet connection is required
 
 ## Installation
 
