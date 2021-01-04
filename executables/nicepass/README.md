@@ -5,12 +5,12 @@ to the clipboard with at least one random symbol
 
 ## Installation
 
-Download and place madpass.exe into a preferred folder ie. C:\Apps \
-Drag the madpass.exe to the Win 10 Taskbar
+Download and place nicepass.exe into a preferred folder ie. C:\Apps \
+Drag the nicepass.exe to the Win 10 Taskbar
 
 ## Usage
 
-Click the madpass icon and wait for the message 'Password copied' \
+Click the nicepass icon and wait for the message 'Password copied' \
 The random password will now be copied to your clipboard \
 You may now press paste (ctrl-v)
 
