@@ -8,6 +8,8 @@ dinopass.com over SSL so an internet connection is required
 
 Download and place nicepass.exe into a preferred folder ie. C:\Apps \
 Drag the nicepass.exe to the Win 10 Taskbar
+On first startup you will get a Windows Smartscreen warning 'Windows smartscreen prevented an unrecognised application from running'
+Please click More info > Run away
 
 ## Usage
 
