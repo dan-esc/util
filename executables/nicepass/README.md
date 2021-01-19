@@ -1,15 +1,11 @@
 # Nicepass
 
-A simple executable to produce a secure yet human readable password that copies
-to the clipboard with at least one random symbol. The script will query 
-dinopass.com over SSL so an internet connection is required
+A simple executable to produce a secure yet human readable password that copies to the clipboard with at least one random symbol. The script will query dinopass.com over SSL so an internet connection is required
 
 ## Installation
 
-Download and place nicepass.exe into a preferred folder ie. C:\Apps \
-Drag the nicepass.exe to the Win 10 Taskbar
-On first startup you will get a Windows Smartscreen warning 'Windows smartscreen prevented an unrecognised application from running'
-Please click More info > Run away
+Download and place nicepass.exe into a preferred folder ie. C:\Apps
+Drag the nicepass.exe to the Win 10 Taskbar On first startup you will get a Windows Smartscreen warning 'Windows smartscreen prevented an unrecognised application from running' Please click More info > Run away
 
 ## Usage
 

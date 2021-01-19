@@ -25,14 +25,18 @@ if ( $Password -match '\W' )
 {
     #Write-Host -ForegroundColor Green "True" 
     $Password | clip
+    $msg = "Random password copied"
+    Invoke-WmiMethod -Path Win32_Process -Name Create -ArgumentList "msg * /time:1 $msg"  
 }
 else
 {
     #Write-Host -ForegroundColor Red "False" 
     $Password + $AddRandomSymbol | clip
-    }
+    $msg = "Random password copied"
+    Invoke-WmiMethod -Path Win32_Process -Name Create -ArgumentList "msg * /time:1 $msg"  
+}
 
-    <#
+<#
 if ( Select-String -Path-Content -Path C:\process.txt = $true )
 {
     Get-Content -Path C:\process.txt | clip
