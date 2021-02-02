@@ -1,6 +1,6 @@
 # Nicepass
 
-A simple executable to produce a secure yet human readable password that copies to the clipboard with at least one random symbol. The script will query dinopass.com over SSL so an internet connection is required
+A simple executable to produce a secure yet human readable password that copies to the clipboard with at least one random symbol. The script will query dinopass.com over SSL so an internet connection is required.
 
 ## Installation
 
@@ -12,6 +12,10 @@ Drag the nicepass.exe to the Win 10 Taskbar On first startup you will get a Wind
 Click the nicepass icon and wait for the message 'Password copied' \
 The random password will now be copied to your clipboard \
 You may now press paste (ctrl-v)
+
+## Issues
+If you have never opened Internet Explorer in Windows 10 the script will on produce a symbol.
+Open IE, close and then use the app.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
