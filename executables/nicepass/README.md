@@ -14,7 +14,7 @@ The random password will now be copied to your clipboard \
 You may now press paste (ctrl-v)
 
 ## Issues
-If you have never opened Internet Explorer in Windows 10 the script will on produce a symbol.
+If you have never opened Internet Explorer in Windows 10 the script will only produce a symbol.
 Open IE, close and then use the app.
 
 ## License
