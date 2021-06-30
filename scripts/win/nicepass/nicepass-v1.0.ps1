@@ -1,4 +1,4 @@
-<#                   
+<#
          d8b                                                      
          Y8P                                                      
                                                                   
@@ -16,23 +16,35 @@ to the clipboard with at least one random symbol. The script will query
 dinopass.com over SSL so an internet connection is <required>
 #>
 
-#Goal to check for symbol before adding
+#make changes to nicepass
 
-$WebResponse = Invoke-Webrequest -Uri "https://www.dinopass.com/password/strong"
-$Password = $WebResponse.Content
-$AddRandomSymbol = @('!','@','#','$','%','^','&','*','(',')','-','+','=','-') | Get-Random -Count 1 
-if ( $Password -match '\W' )
+$WebResponse = Invoke-Webrequest -Uri "https://www.dinopass.com/password/strong" #Thank you dino :)
+$Password = $WebResponse.Content #Grab output of password on webpage
+$AddRandomSymbol = @('!','@','#','$','%','&','*','=') | Get-Random -Count 1 #Grab random symbol, nothing too abstract
+if ( $Password -match '\W' ) #If password has a symbol copy to clipboard
 {
-    #Write-Host -ForegroundColor Green "True" 
-    $Password | clip
+    #Write-Host -ForegroundColor Green "True" #For testing
+    Set-Clipboard -Value $Password #Copies item to clipboard without a new line
+    $msg = "Random password copied" #Processing the password takes time, old message box will destroy itself to let user know when they can paste.
+    Invoke-WmiMethod -Path Win32_Process -Name Create -ArgumentList "msg * /time:1 $msg" #Destroy message box after 1 second
 }
-else
+else #If password from dinopass has no symbol
 {
     #Write-Host -ForegroundColor Red "False" 
-    $Password + $AddRandomSymbol | clip
-    }
+    #$Password + $AddRandomSymbol | Set-Clipboard
+    $PasswordSymbol = $Password + $AddRandomSymbol 
+    Set-Clipboard -Value $PasswordSymbol
+    $msg = "Random password copied" 
+    Invoke-WmiMethod -Path Win32_Process -Name Create -ArgumentList "msg * /time:1 $msg"  
+}
 
-    <#
+<##############################################################################
+###############################################################################
+                            Old workings and notes
+###############################################################################
+##############################################################################>
+
+<#
 if ( Select-String -Path-Content -Path C:\process.txt = $true )
 {
     Get-Content -Path C:\process.txt | clip
@@ -157,3 +169,7 @@ abc…	Letters
 (abc|def)	Matches abc or def
 
 https://regex101.com/ to test regex
+#>
+
+#$Password | clip #Old basic ver
+#$Password + $AddRandomSymbol | clip #Old basic ver
