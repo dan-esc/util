@@ -16,8 +16,6 @@ to the clipboard with at least one random symbol. The script will query
 dinopass.com over SSL so an internet connection is <required>
 #>
 
-#make changes to nicepass
-
 $WebResponse = Invoke-Webrequest -Uri "https://www.dinopass.com/password/strong" #Thank you dino :)
 $Password = $WebResponse.Content #Grab output of password on webpage
 $AddRandomSymbol = @('!','@','#','$','%','&','*','=') | Get-Random -Count 1 #Grab random symbol, nothing too abstract
