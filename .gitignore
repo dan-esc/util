@@ -1,3 +1,2 @@
-*.json
-logs/
 *.log
+scripts/linux/.vscode/
